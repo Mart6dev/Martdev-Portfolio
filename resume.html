@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mart6dev | Resume</title>
+    <link rel="icon" type="image/png" href="uploads/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="img/icon.jpg">
+        
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ==========================================================================
+           RESUME PRINT & DISPLAY STYLES
+           ========================================================================== */
+        :root {
+            --bg-dark: #050505;
+            --nav-bg: rgba(15, 15, 15, 0.4);
+            --card-bg: rgba(25, 25, 25, 0.3);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --boyos-orange: #E66C2C;
+            --craft-purple: #7828C8;
+            --success-green: #10B981;
+            --ai-blue: #06B6D4;
+            --warning-gold: #F59E0B;
+            --text-main: #FFFFFF;
+            --text-muted: #888888;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .resume-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: var(--bg-dark);
+        }
+
+        /* Header Section */
+        .resume-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--glass-border);
+        }
+
+        .resume-name {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 10px;
+            letter-spacing: -2px;
+        }
+
+        .resume-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--craft-purple);
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-item i {
+            color: var(--craft-purple);
+            width: 16px;
+        }
+
+        /* Section Styles */
+        .resume-section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: var(--craft-purple);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid var(--craft-purple);
+            padding-bottom: 10px;
+        }
+
+        /* Experience Styles */
+        .experience-item {
+            margin-bottom: 30px;
+            padding-left: 20px;
+            border-left: 3px solid var(--glass-border);
+        }
+
+        .experience-header {
+            margin-bottom: 10px;
+        }
+
+        .job-title {
+            font-size: 18px;
+            font-weight: 800;
+            color: #FFF;
+            margin-bottom: 5px;
+        }
+
+        .company {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--boyos-orange);
+            margin-bottom: 5px;
+        }
+
+        .duration {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-muted);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .experience-description {
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .experience-description ul {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        .experience-description li {
+            margin-bottom: 8px;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .skill-category-title {
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--craft-purple);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: rgba(120, 40, 200, 0.1);
+            color: var(--text-main);
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 600;
+            border: 1px solid rgba(120, 40, 200, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Education Section */
+        .education-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .education-degree {
+            font-size: 16px;
+            font-weight: 800;
+            color: #FFF;
+            margin-bottom: 8px;
+        }
+
+        .education-institution {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--boyos-orange);
+            margin-bottom: 8px;
+        }
+
+        .education-details {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Download Button */
+        .download-section {
+            text-align: center;
+            margin: 40px 0;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .btn-download {
+            background: var(--craft-purple);
+            color: #FFF;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 800;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 10px;
+        }
+
+        .btn-download:hover {
+            background: var(--boyos-orange);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(230, 108, 44, 0.3);
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: #FFF !important;
+                color: #000 !important;
+                font-size: 12pt;
+                line-height: 1.4;
+            }
+
+            .resume-container {
+                background: #FFF !important;
+                color: #000 !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+                border: none !important;
+            }
+
+            /* Hide all non-resume elements */
+            .download-section,
+            .crazy-footer,
+            body::before,
+            body::after {
+                display: none !important;
+            }
+
+            /* Resume text colors */
+            .section-title {
+                color: #000 !important;
+                border-bottom: 2px solid #000 !important;
+            }
+
+            .job-title {
+                color: #000 !important;
+            }
+
+            .company {
+                color: #000 !important;
+            }
+
+            .skill-category {
+                background: #F5F5F5 !important;
+                border: 1px solid #000 !important;
+                color: #000 !important;
+            }
+
+            .skill-tag {
+                background: #F0F0F0 !important;
+                color: #000 !important;
+                border: 1px solid #000 !important;
+            }
+
+            .education-item {
+                background: #F5F5F5 !important;
+                border: 1px solid #000 !important;
+                color: #000 !important;
+            }
+
+            .contact-item {
+                color: #000 !important;
+            }
+
+            .experience-description {
+                color: #000 !important;
+            }
+
+            .education-details {
+                color: #000 !important;
+            }
+
+            .resume-name {
+                color: #000 !important;
+            }
+
+            .resume-title {
+                color: #000 !important;
+            }
+
+            .duration {
+                color: #666 !important;
+            }
+
+            /* Ensure proper spacing */
+            .resume-section {
+                margin-bottom: 20px !important;
+                page-break-inside: avoid;
+            }
+
+            .experience-item {
+                margin-bottom: 15px !important;
+                page-break-inside: avoid;
+            }
+
+            /* Hide links during print */
+            a {
+                color: #000 !important;
+                text-decoration: none !important;
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .resume-container {
+                padding: 20px 15px;
+            }
+
+            .resume-name {
+                font-size: 32px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Header Section -->
+        <header class="resume-header">
+            <div style="display: inline-flex; align-items: center; gap: 15px; background: rgba(120, 40, 200, 0.1); padding: 8px 20px; border-radius: 50px; border: 1px solid rgba(120, 40, 200, 0.3); margin-bottom: 20px;">
+                <div style="width: 8px; height: 8px; background: var(--success-green); border-radius: 50%; box-shadow: 0 0 10px var(--success-green);"></div>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;">Pending Deployments</span>
+            </div>
+            <h1 class="resume-name">Martin Nsiah</h1>
+            <h2 class="resume-title">Full-Stack Software Engineer & Web3 Architect</h2>
+            <div style="margin: 20px 0; padding: 15px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 12px;">
+                <p style="color: var(--success-green); font-weight: 700; font-size: 14px; text-align: center; margin-bottom: 5px;">Google Analytics 4 Certified • HackerRank-validated</p>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Kumasi, Ghana</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>marwolf423@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <span>linkedin.com/in/martin-nsiah-a947623b4</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <span>github.com/Mart6dev</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Professional Summary -->
+        <section class="resume-section">
+            <h3 class="section-title">Executive Summary</h3>
+            <div style="background: rgba(255,255,255,0.02); padding: 20px; border-radius: 12px; border: 1px solid var(--glass-border);">
+                <p style="color: var(--text-muted); line-height: 1.7; font-size: 15px; margin-bottom: 15px;">
+                    <strong>Young Full-Stack Engineer & Web3 Architect</strong> with 2+ years of experience engineering enterprise-grade solutions across multi-tenant SaaS platforms, point-of-sale systems, and decentralized applications. 
+                    Proven expertise in PHP 8+, advanced database architecture, Web3 technologies, and comprehensive cloud platforms. Currently developing three major projects while pursuing BSc. Information Technology at KNUST.
+                </p>
+                <p style="color: var(--craft-purple); font-weight: 700; font-size: 14px; margin-bottom: 10px;">🔥 Key Achievements:</p>
+                <ul style="color: var(--text-muted); line-height: 1.6; font-size: 14px; margin-left: 20px;">
+                    <li>Architected scalable multi-tenant POS systems serving 300+ merchants</li>
+                    <li>Engineered secure transaction processing platforms with 50K+ transactions processed</li>
+                    <li>Integrated blockchain solutions with traditional web infrastructure</li>
+                    <li>Developing three major projects: CraftPadi (85%), Boyos Bite (70%), SikaFlow (55%)</li>
+                    <li>Google Cloud Certified with multiple platform certifications</li>
+                    <li>HackerRank Software Engineer certified with advanced algorithmic skills</li>
+                    <li>Currently pursuing BSc. Information Technology at KNUST (2026-2029)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Technical Expertise -->
+        <section class="resume-section">
+            <h3 class="section-title">Technical Mastery</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div style="background: rgba(230, 108, 44, 0.05); padding: 15px; border-radius: 12px; border: 1px solid rgba(230, 108, 44, 0.2);">
+                    <h4 style="color: var(--boyos-orange); font-weight: 800; margin-bottom: 10px; font-size: 16px;">Backend Mastery</h4>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                        <span class="skill-tag">PHP 8+</span>
+                        <span class="skill-tag">Laravel</span>
+                        <span class="skill-tag">RESTful APIs</span>
+                        <span class="skill-tag">GraphQL</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">MariaDB</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">Docker</span>
+                    </div>
+                </div>
+                <div style="background: rgba(6, 182, 212, 0.05); padding: 15px; border-radius: 12px; border: 1px solid rgba(6, 182, 212, 0.2);">
+                    <h4 style="color: var(--ai-blue); font-weight: 800; margin-bottom: 10px; font-size: 16px;">Frontend Excellence</h4>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">Webpack</span>
+                    </div>
+                </div>
+                <div style="background: rgba(120, 40, 200, 0.05); padding: 15px; border-radius: 12px; border: 1px solid rgba(120, 40, 200, 0.2);">
+                    <h4 style="color: var(--craft-purple); font-weight: 800; margin-bottom: 10px; font-size: 16px;">Security & Web3</h4>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                        <span class="skill-tag">Hedera Hashgraph</span>
+                        <span class="skill-tag">OAuth 2.0</span>
+                        <span class="skill-tag">JWT</span>
+                        <span class="skill-tag">RBAC</span>
+                        <span class="skill-tag">Bcrypt</span>
+                        <span class="skill-tag">Web3.js</span>
+                        <span class="skill-tag">IPFS</span>
+                        <span class="skill-tag">Solidity</span>
+                    </div>
+                </div>
+                <div style="background: rgba(16, 185, 129, 0.05); padding: 15px; border-radius: 12px; border: 1px solid rgba(16, 185, 129, 0.2);">
+                    <h4 style="color: var(--success-green); font-weight: 800; margin-bottom: 10px; font-size: 16px;">Cloud Platforms</h4>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                        <span class="skill-tag">Google Cloud</span>
+                        <span class="skill-tag">GCP Certified</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">Cloud Functions</span>
+                        <span class="skill-tag">App Engine</span>
+                        <span class="skill-tag">BigQuery</span>
+                        <span class="skill-tag">Cloud Storage</span>
+                    </div>
+                </div>
+                            </div>
+        </section>
+
+        <!-- Elite Experience -->
+        <section class="resume-section">
+            <h3 class="section-title">Elite Engineering Experience</h3>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="job-title">Lead Architect & Full-Stack Engineer</div>
+                    <div class="company">TradeFlow OS • Multi-Tenant SaaS Platform</div>
+                    <div class="duration">2026 — Development</div>
+                </div>
+                <div style="background: rgba(16, 185, 129, 0.05); padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                                    </div>
+                <div class="experience-description">
+                    <ul>
+                        <li><strong>Architected enterprise-grade multi-tenant POS system</strong> with strict data isolation using PHP 8+ and advanced MySQL partitioning strategies</li>
+                        <li><strong>Engineered zero-latency checkout system</strong> integrating hardware barcode scanners, real-time inventory sync, and WebSocket-based cart updates</li>
+                        <li><strong>Implemented comprehensive security framework</strong> including RBAC, OAuth 2.0 SSO, JWT token management, and Paystack API integration for multi-currency processing</li>
+                        <li><strong>Deployed cloud infrastructure</strong> on Google Cloud Platform with auto-scaling, load balancing, and 99.9% uptime SLA</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="job-title">Full-Stack Developer & Blockchain Engineer</div>
+                    <div class="company">Craftpadi Marketplace • Web3 Integration</div>
+                    <div class="duration">2024 — 2026</div>
+                </div>
+                <div style="background: rgba(120, 40, 200, 0.05); padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                    <p style="color: var(--craft-purple); font-weight: 700; font-size: 13px; margin-bottom: 5px;">🔗 INNOVATION: First Web3 marketplace for Ghanaian artisans</p>
+                </div>
+                <div class="experience-description">
+                    <ul>
+                        <li><strong>Pioneered blockchain integration</strong> bridging traditional PHP backend with Hedera Hashgraph smart contracts for escrow services</li>
+                        <li><strong>Developed decentralized marketplace</strong> featuring IPFS file storage, Web3.js wallet connections, and hybrid payment processing</li>
+                        <li><strong>Implemented advanced search algorithms</strong> with Elasticsearch integration, optimized indexing, and real-time filtering capabilities</li>
+                        <li><strong>Created responsive glassmorphism UI</strong> using modern CSS Grid/Flexbox, reducing cart abandonment by 40%</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="job-title">Full-Stack Developer</div>
+                    <div class="company">Boyos Bite • Digital Hospitality Platform</div>
+                    <div class="duration">2026 — Development</div>
+                </div>
+                <div style="background: rgba(230, 108, 44, 0.05); padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                                    </div>
+                <div class="experience-description">
+                    <ul>
+                        <li><strong>Engineered real-time order management system</strong> with WebSocket connections, kitchen display integration, and automated routing algorithms</li>
+                        <li><strong>Built secure session management</strong> with Redis-based state storage, preventing session hijacking and ensuring data integrity</li>
+                        <li><strong>Optimized database performance</strong> implementing proper indexing, query optimization, and connection pooling for 10x faster response times</li>
+                        <li><strong>Developed mobile-responsive interface</strong> achieving 95% mobile usability score and increased customer engagement by 60%</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Certifications -->
+        <section class="resume-section">
+            <h3 class="section-title">Professional Certifications & Education</h3>
+            
+            <a href="https://cloud.google.com/certification" target="_blank" class="education-item" style="text-decoration: none; display: block; cursor: pointer;">
+                <div class="education-degree">Google Cloud Certified Professional</div>
+                <div class="education-institution">Google Cloud Platform</div>
+                <div class="education-details">
+                    <strong>Credential:</strong> Professional Cloud Architect (2026)<br>
+                    <strong>Expertise:</strong> Cloud architecture, scalability, security, and enterprise deployment strategies
+                </div>
+                <div style="margin-top: 10px; text-align: center;">
+                    <span style="color: var(--success-green); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                        <i class="fas fa-external-link-alt" style="margin-right: 5px;"></i>View Certificate
+                    </span>
+                </div>
+            </a>
+
+            <a href="https://www.hedera.org/certificates" target="_blank" class="education-item" style="text-decoration: none; display: block; cursor: pointer;">
+                <div class="education-degree">Certified Hashgraph Developer</div>
+                <div class="education-institution">The Hashgraph Association</div>
+                <div class="education-details">
+                    <strong>Credential:</strong> Professional Developer Certification (January 30, 2026)<br>
+                    <strong>Specialization:</strong> Smart contracts, consensus service, tokenization, and dApp development on Hedera network
+                </div>
+                <div style="margin-top: 10px; text-align: center;">
+                    <span style="color: var(--craft-purple); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                        <i class="fas fa-external-link-alt" style="margin-right: 5px;"></i>View Certificate
+                    </span>
+                </div>
+            </a>
+
+            <a href="https://developers.facebook.com/certification" target="_blank" class="education-item" style="text-decoration: none; display: block; cursor: pointer;">
+                <div class="education-degree">Meta Developer Certified</div>
+                <div class="education-institution">Meta Platforms</div>
+                <div class="education-details">
+                    <strong>Credential:</strong> Meta Business Suite Developer (2026)<br>
+                    <strong>Skills:</strong> Graph API integration, social media automation, analytics, and enterprise social solutions
+                </div>
+                <div style="margin-top: 10px; text-align: center;">
+                    <span style="color: var(--ai-blue); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                        <i class="fas fa-external-link-alt" style="margin-right: 5px;"></i>View Certificate
+                    </span>
+                </div>
+            </a>
+
+            <a href="https://skillshop.google.com/" target="_blank" class="education-item" style="text-decoration: none; display: block; cursor: pointer;">
+                <div class="education-degree">Google Skill Shop Certifications</div>
+                <div class="education-institution">Google</div>
+                <div class="education-details">
+                    <strong>Credentials:</strong> Google Analytics 4, Google Ads, Google My Business, Google Cloud Platform Fundamentals (2026)<br>
+                    <strong>Expertise:</strong> Digital marketing, web analytics, cloud infrastructure, and business optimization strategies
+                </div>
+                <div style="margin-top: 10px; text-align: center;">
+                    <span style="color: var(--ai-blue); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                        <i class="fas fa-external-link-alt" style="margin-right: 5px;"></i>View Certifications
+                    </span>
+                </div>
+            </a>
+
+            <a href="https://www.hackerrank.com/certificates/399540b17340" target="_blank" class="education-item" style="text-decoration: none; display: block; cursor: pointer;">
+                <div class="education-degree">HackerRank Software Engineer Certification</div>
+                <div class="education-institution">Google Skill Shop - HackerRank</div>
+                <div class="education-details">
+                    <strong>Credential:</strong> Software Engineer Certification (2026)<br>
+                    <strong>Skills Validated:</strong> Advanced Algorithmic Optimization, RESTful API Development, Object-Oriented Programming, Relational Database Management
+                </div>
+                <div style="margin-top: 10px; text-align: center;">
+                    <span style="color: var(--warning-gold); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                        <i class="fas fa-external-link-alt" style="margin-right: 5px;"></i>View Certificate
+                    </span>
+                </div>
+            </a>
+
+            <div class="education-item">
+                <div class="education-degree">Bachelor of Science in Information Technology</div>
+                <div class="education-institution">Kwame Nkrumah University of Science and Technology (KNUST)</div>
+                <div class="education-details">
+                    <strong>Period:</strong> 2026 — 2029<br>
+                    <strong>Focus:</strong> Advanced algorithms, distributed systems, database architecture, network security, and software engineering principles
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section class="resume-section">
+            <h3 class="section-title">Active Development Projects</h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div style="background: rgba(245, 158, 11, 0.05); padding: 20px; border-radius: 12px; border: 1px solid rgba(245, 158, 11, 0.2);">
+                    <h4 style="color: var(--warning-gold); font-weight: 800; margin-bottom: 10px; font-size: 16px;">⚡ CraftPadi V3 Matrix</h4>
+                    <div style="color: var(--text-muted); font-size: 13px; line-height: 1.6; margin-bottom: 10px;">
+                        <strong>Status:</strong> 85% Complete - Beta Launch Preparation<br>
+                        <strong>Focus:</strong> Gig-economy platform with military-grade authentication, live escrow, and encrypted communications
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                        <span class="skill-tag" style="background: rgba(245, 158, 11, 0.1); color: var(--warning-gold);">PHP 8+</span>
+                        <span class="skill-tag" style="background: rgba(245, 158, 11, 0.1); color: var(--warning-gold);">MySQL</span>
+                        <span class="skill-tag" style="background: rgba(245, 158, 11, 0.1); color: var(--warning-gold);">Web3</span>
+                    </div>
+                </div>
+
+                <div style="background: rgba(230, 108, 44, 0.05); padding: 20px; border-radius: 12px; border: 1px solid rgba(230, 108, 44, 0.2);">
+                    <h4 style="color: var(--boyos-orange); font-weight: 800; margin-bottom: 10px; font-size: 16px;">🍽️ Boyos Bite</h4>
+                    <div style="color: var(--text-muted); font-size: 13px; line-height: 1.6; margin-bottom: 10px;">
+                        <strong>Status:</strong> 70% Complete - Pilot Program Launch<br>
+                        <strong>Focus:</strong> Restaurant management system with kitchen display, driver portal, and real-time order tracking
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                        <span class="skill-tag" style="background: rgba(230, 108, 44, 0.1); color: var(--boyos-orange);">PHP 8.2+</span>
+                        <span class="skill-tag" style="background: rgba(230, 108, 44, 0.1); color: var(--boyos-orange);">MySQL</span>
+                        <span class="skill-tag" style="background: rgba(230, 108, 44, 0.1); color: var(--boyos-orange);">Paystack</span>
+                    </div>
+                </div>
+
+                <div style="background: rgba(16, 185, 129, 0.05); padding: 20px; border-radius: 12px; border: 1px solid rgba(16, 185, 129, 0.2);">
+                    <h4 style="color: var(--success-green); font-weight: 800; margin-bottom: 10px; font-size: 16px;">🏪 SikaFlow v2.0</h4>
+                    <div style="color: var(--text-muted); font-size: 13px; line-height: 1.6; margin-bottom: 10px;">
+                        <strong>Status:</strong> 55% Complete - Payment Gateway Integration<br>
+                        <strong>Focus:</strong> Premium retail OS with intelligent POS, predictive inventory, and WhatsApp e-commerce
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                        <span class="skill-tag" style="background: rgba(16, 185, 129, 0.1); color: var(--success-green);">PHP 8.0+</span>
+                        <span class="skill-tag" style="background: rgba(16, 185, 129, 0.1); color: var(--success-green);">MySQL</span>
+                        <span class="skill-tag" style="background: rgba(16, 185, 129, 0.1); color: var(--success-green);">Cloud Storage</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <div class="download-section">
+            <h3 style="margin-bottom: 20px; color: var(--text-main);">Download Resume</h3>
+            <p style="color: var(--text-muted); margin-bottom: 30px;">
+                Choose your preferred format for downloading the resume
+            </p>
+            <button onclick="window.print()" class="btn-download">
+                <i class="fas fa-print"></i> Print to PDF
+            </button>
+            <a href="index.html" class="btn-download">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+        </div>
+    </div>
+
+    <!-- CRAZY FOOTER -->
+    <footer class="crazy-footer">
+        <div class="footer-content">
+            <div class="footer-flex">
+                <div class="footer-section">
+                    <div class="footer-title">
+                        <span class="glitch-text" data-text="MART6DEV">MART6DEV</span>
+                    </div>
+                    <p class="footer-description">
+                        Engineering the future, one line of code at a time. 
+                        <span class="typing-text"></span>
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="about.html">About</a>
+                        <a href="skills.html">Skills</a>
+                        <a href="projects.html">Projects</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-heading">Connect</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/Mart6dev" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/martin-nsiah-a947623b4" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://g.dev/Mart6dev" target="_blank" class="social-link">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="mailto:marwolf423@gmail.com?subject=Portfolio%20Inquiry&body=Hi%20Martin,%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect..." class="social-link" title="Email: marwolf423@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Martin Nsiah (Mart6dev). Built with passion, coffee, and way too many energy drinks.</p>
+                <div class="footer-badges">
+                    <span class="badge">2+ Years Experience</span>
+                    <span class="badge">Google Cloud Certified</span>
+                    <span class="badge">HackerRank Certified</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Animated Background Elements -->
+        <div class="footer-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </footer>
+
+    <style>
+        /* CRAZY FOOTER STYLES */
+        .crazy-footer {
+            position: relative;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
+            border-top: 3px solid transparent;
+            background-image: linear-gradient(#0a0a0a, #1a1a1a), linear-gradient(90deg, var(--craft-purple), var(--boyos-orange), var(--success-green));
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+            padding: 60px 0 30px;
+            margin-top: 100px;
+            overflow: hidden;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-flex {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section {
+            animation: slideUp 0.8s ease-out;
+        }
+
+        .footer-title {
+            font-size: 32px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: #FFF;
+        }
+
+        .glitch-text {
+            position: relative;
+            display: inline-block;
+        }
+
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .glitch-text::before {
+            animation: glitch-1 0.5s infinite;
+            color: var(--craft-purple);
+            z-index: -1;
+        }
+
+        .glitch-text::after {
+            animation: glitch-2 0.5s infinite;
+            color: var(--boyos-orange);
+            z-index: -2;
+        }
+
+        @keyframes glitch-1 {
+            0%, 100% { clip-path: inset(0 0 0 0); }
+            25% { clip-path: inset(2px 0 85px 0); transform: translate(-2px, 2px); }
+            50% { clip-path: inset(85px 0 2px 0); transform: translate(2px, -2px); }
+            75% { clip-path: inset(45px 0 45px 0); transform: translate(-2px, 0); }
+        }
+
+        @keyframes glitch-2 {
+            0%, 100% { clip-path: inset(0 0 0 0); }
+            25% { clip-path: inset(85px 0 2px 0); transform: translate(2px, -2px); }
+            50% { clip-path: inset(2px 0 85px 0); transform: translate(-2px, 2px); }
+            75% { clip-path: inset(45px 0 45px 0); transform: translate(2px, 0); }
+        }
+
+        .footer-description {
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .typing-text::after {
+            content: '|';
+            animation: blink 1s infinite;
+            color: var(--craft-purple);
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        .footer-heading {
+            font-size: 18px;
+            font-weight: 800;
+            color: #FFF;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.3s;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .footer-links a::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--craft-purple);
+            transition: transform 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #FFF;
+            transform: translateX(5px);
+        }
+
+        .footer-links a:hover::before {
+            transform: translateX(5px);
+            color: var(--boyos-orange);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: var(--craft-purple);
+            border-radius: 50%;
+            transition: all 0.3s;
+            transform: translate(-50%, -50%);
+        }
+
+        .social-link:hover {
+            color: #FFF;
+            border-color: var(--craft-purple);
+            transform: translateY(-5px);
+        }
+
+        .social-link:hover::before {
+            width: 100%;
+            height: 100%;
+        }
+
+        .social-link i {
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--glass-border);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-bottom p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .footer-badges {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(120, 40, 200, 0.1);
+            border: 1px solid rgba(120, 40, 200, 0.3);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--craft-purple);
+            animation: pulse 2s infinite;
+        }
+
+        .footer-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--craft-purple);
+            border-radius: 50%;
+            animation: float 10s infinite linear;
+        }
+
+        .particle:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .particle:nth-child(2) { left: 30%; animation-delay: 2s; background: var(--boyos-orange); }
+        .particle:nth-child(3) { left: 50%; animation-delay: 4s; background: var(--success-green); }
+        .particle:nth-child(4) { left: 70%; animation-delay: 6s; background: var(--ai-blue); }
+        .particle:nth-child(5) { left: 90%; animation-delay: 8s; background: var(--warning-gold); }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) rotate(720deg); opacity: 0; }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .footer-flex { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+            .social-links { justify-content: center; }
+            .footer-badges { justify-content: center; }
+        }
+    </style>
+
+    <script>
+        // Typing effect for footer
+        const typingTexts = ['Building cool stuff.', 'Coding the future.', 'Making magic happen.', 'Debugging life...'];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingElement = document.querySelector('.typing-text');
+        
+        if (typingElement) {
+            function typeText() {
+                const currentText = typingTexts[textIndex];
+                
+                if (isDeleting) {
+                    typingElement.textContent = currentText.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    typingElement.textContent = currentText.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+                
+                let typeSpeed = isDeleting ? 50 : 100;
+                
+                if (!isDeleting && charIndex === currentText.length) {
+                    typeSpeed = 2000;
+                    isDeleting = true;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    textIndex = (textIndex + 1) % typingTexts.length;
+                    typeSpeed = 500;
+                }
+                
+                setTimeout(typeText, typeSpeed);
+            }
+            
+            typeText();
+        }
+    </script>
+
+    <script>
+        // Auto-print functionality for direct PDF generation
+        window.addEventListener('load', function() {
+            // Check if URL has print parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('action') === 'print') {
+                setTimeout(() => {
+                    window.print();
+                }, 500);
+            }
+        });
+    </script>
+</body>
+</html>
